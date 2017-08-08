@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4D2066911F3978170092352B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2066901F3978170092352B /* main.m */; };
 		4D2066941F3978170092352B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2066931F3978170092352B /* AppDelegate.m */; };
-		4D2066971F3978170092352B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2066961F3978170092352B /* ViewController.m */; };
-		4D20669A1F3978170092352B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2066981F3978170092352B /* Main.storyboard */; };
 		4D20669C1F3978170092352B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D20669B1F3978170092352B /* Assets.xcassets */; };
 		4D20669F1F3978170092352B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D20669D1F3978170092352B /* LaunchScreen.storyboard */; };
 		4D2066AA1F3978170092352B /* SmartHomeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2066A91F3978170092352B /* SmartHomeProjectTests.m */; };
@@ -39,9 +37,6 @@
 		4D2066901F3978170092352B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D2066921F3978170092352B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4D2066931F3978170092352B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4D2066951F3978170092352B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4D2066961F3978170092352B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4D2066991F3978170092352B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D20669B1F3978170092352B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D20669E1F3978170092352B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D2066A01F3978170092352B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,9 +98,6 @@
 			children = (
 				4D2066921F3978170092352B /* AppDelegate.h */,
 				4D2066931F3978170092352B /* AppDelegate.m */,
-				4D2066951F3978170092352B /* ViewController.h */,
-				4D2066961F3978170092352B /* ViewController.m */,
-				4D2066981F3978170092352B /* Main.storyboard */,
 				4D20669B1F3978170092352B /* Assets.xcassets */,
 				4D20669D1F3978170092352B /* LaunchScreen.storyboard */,
 				4D2066A01F3978170092352B /* Info.plist */,
@@ -202,6 +194,7 @@
 		4D2066841F3978170092352B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SH;
 				LastUpgradeCheck = 0810;
 				TargetAttributes = {
 					4D20668B1F3978170092352B = {
@@ -247,7 +240,6 @@
 			files = (
 				4D20669F1F3978170092352B /* LaunchScreen.storyboard in Resources */,
 				4D20669C1F3978170092352B /* Assets.xcassets in Resources */,
-				4D20669A1F3978170092352B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D2066971F3978170092352B /* ViewController.m in Sources */,
 				4D2066941F3978170092352B /* AppDelegate.m in Sources */,
 				4D2066911F3978170092352B /* main.m in Sources */,
 			);
@@ -310,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4D2066981F3978170092352B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D2066991F3978170092352B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4D20669D1F3978170092352B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -423,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SmartHomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangtetravel.SmartHomeProject;
@@ -434,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SmartHomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangtetravel.SmartHomeProject;
