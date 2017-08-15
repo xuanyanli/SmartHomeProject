@@ -22,6 +22,7 @@
 		4D778EBE1F3FD19C00253D73 /* MyCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D778EBC1F3FD19C00253D73 /* MyCenterViewController.xib */; };
 		4D778EC11F3FD1C700253D73 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778EC01F3FD1C700253D73 /* BaseViewController.m */; };
 		4D778EC81F3FD7C400253D73 /* SH_AFNetClientTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778EC71F3FD7C400253D73 /* SH_AFNetClientTool.m */; };
+		4DF338D61F42A05700F05B28 /* test_leyou.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4DF338D51F42A05700F05B28 /* test_leyou.cer */; };
 		8EBCE9F3153656EF032F67B4 /* libPods-SmartHomeProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F38125390698DDCA11E7EC4 /* libPods-SmartHomeProject.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		4D778EC41F3FD3EA00253D73 /* ClassesHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesHeader.h; sourceTree = "<group>"; };
 		4D778EC61F3FD7C400253D73 /* SH_AFNetClientTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SH_AFNetClientTool.h; sourceTree = "<group>"; };
 		4D778EC71F3FD7C400253D73 /* SH_AFNetClientTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SH_AFNetClientTool.m; sourceTree = "<group>"; };
+		4DF338D51F42A05700F05B28 /* test_leyou.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_leyou.cer; sourceTree = "<group>"; };
+		4DF338D71F42A76500F05B28 /* RequstUrlHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequstUrlHeader.h; sourceTree = "<group>"; };
 		9F38125390698DDCA11E7EC4 /* libPods-SmartHomeProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartHomeProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +141,7 @@
 		4D20668F1F3978170092352B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4DF338D51F42A05700F05B28 /* test_leyou.cer */,
 				4D20669B1F3978170092352B /* Assets.xcassets */,
 				4D20669D1F3978170092352B /* LaunchScreen.storyboard */,
 				4D778EA81F3FBB4800253D73 /* Main.storyboard */,
@@ -409,6 +413,7 @@
 			children = (
 				4D778EC31F3FD2FB00253D73 /* SmartHome_Prefix.pch */,
 				4D778EC41F3FD3EA00253D73 /* ClassesHeader.h */,
+				4DF338D71F42A76500F05B28 /* RequstUrlHeader.h */,
 			);
 			name = Config;
 			path = Classes/Config;
@@ -552,6 +557,7 @@
 				4D20669F1F3978170092352B /* LaunchScreen.storyboard in Resources */,
 				4D778EA71F3FB83500253D73 /* HomePageViewController.xib in Resources */,
 				4D778EBE1F3FD19C00253D73 /* MyCenterViewController.xib in Resources */,
+				4DF338D61F42A05700F05B28 /* test_leyou.cer in Resources */,
 				4D20669C1F3978170092352B /* Assets.xcassets in Resources */,
 				4D778EA91F3FBB4800253D73 /* Main.storyboard in Resources */,
 			);

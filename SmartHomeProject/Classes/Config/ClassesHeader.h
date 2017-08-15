@@ -19,4 +19,9 @@
  */
 #import "AFNetworking.h"
 
+/**
+ 网络请求工具类
+ */
+#import "SH_AFNetClientTool.h"
+
 #endif /* ClassesHeader_h */

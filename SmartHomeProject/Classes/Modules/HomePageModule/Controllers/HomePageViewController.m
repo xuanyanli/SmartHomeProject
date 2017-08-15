@@ -26,6 +26,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //测试获取城市公园接口
+    [[SH_AFNetClientTool shareNetClientTool]resquestWithUrl:@"http://www.baidu.com" pramas:nil method:@"get" isNeedToken:NO currentController:self success:^(NSData *stringData, id JsonDict) {
+        
+        NSLog(@"success:%@",JsonDict);
+    } fail:^(NSError *error) {
+        NSLog(@"error:%@",error.localizedDescription);
+    } noNet:^(NSString *alertMessage) {
+        
+    } tokenFail:^(NSString *tokenFail) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

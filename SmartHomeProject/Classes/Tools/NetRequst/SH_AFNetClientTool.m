@@ -13,11 +13,39 @@
 @interface SH_AFNetClientTool ()
 
 /**
+ 成功回调
+ */
+@property (nonatomic,copy) SuccessBlock successBlock;
+
+/**
+ 失败回调
+ */
+@property (nonatomic,copy) FailBlock failBlock;
+
+/**
+ token失效回调
+ */
+@property (nonatomic,copy) TokenFailBlock tokenFailBlock;
+
+/**
+ 没有网络回调
+ */
+@property (nonatomic,copy) NoNetBlock noNetBlock;
+
+/**
  请求管理类
  */
 @property (nonatomic,strong)AFHTTPSessionManager *httpManager;
 
 @end
+
+//url key
+#define Req_Url_Key @"reqUrlKey"
+
+//param key
+#define Req_ParamDic_Key @"reqParamKey"
+
+#define Req_Manager_Key @"reqManagerKey"
 
 @implementation SH_AFNetClientTool
 
@@ -57,12 +85,6 @@
     //设置https请求
     [self.httpManager setSecurityPolicy:[self customSecurityPolicy]];
     
-    //本地相关信息
-    NSDictionary *infoDic = [[NSBundle mainBundle]infoDictionary];
-    //发布版本号
-    NSString *currentVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
-    NSString *
-    
 }
 
 #pragma mark 配置https证书
@@ -70,7 +92,7 @@
 {
     AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
     
-    NSString *cerPath = [[NSBundle mainBundle]pathForResource:@"" ofType:@"cer"];
+    NSString *cerPath = [[NSBundle mainBundle]pathForResource:@"test_leyou" ofType:@"cer"];
     if ([[NSFileManager defaultManager]fileExistsAtPath:cerPath])
     {
         NSData *cerData = [[NSData alloc]initWithContentsOfFile:cerPath];
@@ -88,6 +110,19 @@
     }
     
     return securityPolicy;
+}
+
+#pragma mark- 数据请求成功之后的解析部分
+- (id)requestSuccessTask:(NSURLSessionDataTask * _Nonnull)task andResponse:(id  _Nullable)responseObject
+{
+    
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+    if ([jsonDic isEqual:[NSNull null]])
+    {
+        return nil;
+    }
+
+    return jsonDic;
 }
 
 /**
@@ -108,12 +143,23 @@
 
 - (void)resquestWithUrl:(NSString *)urlPath pramas:(NSDictionary *)pramaDic method:(NSString *)method isNeedToken:(BOOL)isNeedToken currentController:(UIViewController *)currentController success:(SuccessBlock)successBlock fail:(FailBlock)failBlock noNet:(NoNetBlock)noNetBlock tokenFail:(TokenFailBlock)tokenFailBlock
 {
+    //配置网络请求管理类
+    [self configHttpManager];
+    
+    self.successBlock = [successBlock copy];
+    self.failBlock = [failBlock copy];
+    self.noNetBlock = [noNetBlock copy];
+    self.tokenFailBlock = [tokenFailBlock copy];
+    
+    //网络请求
     if ([[method uppercaseString] isEqualToString:@"GET"])
     {
         //GET 请求
+        [self getWithUrl:urlPath pramas:pramaDic success:successBlock fail:failBlock];
     }else if ([[method uppercaseString] isEqualToString:@"POST"])
     {
         //POST 请求
+        [self postWithUrl:urlPath pramas:pramaDic success:successBlock fail:failBlock];
     }else
     {
         NSLog(@"不支持的请求类型");
@@ -121,22 +167,38 @@
 }
 
 #pragma mark-  Get网络请求请求
-- (void)getWithUrl:(NSString *)urlPath pramas:(NSDictionary *)pramaDic method:(NSString *)method isNeedToken:(BOOL)isNeedToken currentController:(UIViewController *)currentController success:(SuccessBlock)successBlock fail:(FailBlock)failBlock noNet:(NoNetBlock)noNetBlock tokenFail:(TokenFailBlock)tokenFailBlock
+- (void)getWithUrl:(NSString *)urlPath pramas:(NSDictionary *)pramaDic   success:(SuccessBlock)successBlock fail:(FailBlock)failBlock
 {
-
+    [self.httpManager GET:urlPath parameters:pramaDic progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        id jsonDic = [self requestSuccessTask:task andResponse:responseObject];
+        
+        self.successBlock (responseObject,jsonDic);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        self.failBlock (error);
+    }];
 }
 
 #pragma mark- Post网络请求请求
-- (void)postWithUrl:(NSString *)urlPath pramas:(NSDictionary *)pramaDic method:(NSString *)method isNeedToken:(BOOL)isNeedToken currentController:(UIViewController *)currentController success:(SuccessBlock)successBlock fail:(FailBlock)failBlock noNet:(NoNetBlock)noNetBlock tokenFail:(TokenFailBlock)tokenFailBlock
+- (void)postWithUrl:(NSString *)urlPath pramas:(NSDictionary *)pramaDic  success:(SuccessBlock)successBlock fail:(FailBlock)failBlock
 {
-    
+    [self.httpManager POST:urlPath parameters:pramaDic progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        id jsonDic = [self requestSuccessTask:task andResponse:responseObject];
+        
+        self.successBlock (responseObject,jsonDic);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+         self.failBlock (error);
+    }];
 }
 
-
-
-- (NSDictionary *)configRequestWithUrl:(NSString *)urlPath pramas:(NSDictionary *)pramaDic method:(NSString *)method isNeedToken:(BOOL)isNeedToken currentController:(UIViewController *)currentController success:(SuccessBlock)successBlock fail:(FailBlock)failBlock noNet:(NoNetBlock)noNetBlock tokenFail:(TokenFailBlock)tokenFailBlock
-{
-    
-}
 
 @end
