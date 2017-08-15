@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4D2066911F3978170092352B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2066901F3978170092352B /* main.m */; };
-		4D2066941F3978170092352B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2066931F3978170092352B /* AppDelegate.m */; };
 		4D20669C1F3978170092352B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D20669B1F3978170092352B /* Assets.xcassets */; };
 		4D20669F1F3978170092352B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D20669D1F3978170092352B /* LaunchScreen.storyboard */; };
 		4D2066AA1F3978170092352B /* SmartHomeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2066A91F3978170092352B /* SmartHomeProjectTests.m */; };
 		4D2066B51F3978170092352B /* SmartHomeProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2066B41F3978170092352B /* SmartHomeProjectUITests.m */; };
+		4D778E9D1F3FB70D00253D73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778E9C1F3FB70D00253D73 /* AppDelegate.m */; };
+		4D778EA61F3FB83500253D73 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778EA41F3FB83500253D73 /* HomePageViewController.m */; };
+		4D778EA71F3FB83500253D73 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D778EA51F3FB83500253D73 /* HomePageViewController.xib */; };
+		4D778EA91F3FBB4800253D73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D778EA81F3FBB4800253D73 /* Main.storyboard */; };
+		4D778EB11F3FBE1C00253D73 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778EB01F3FBE1C00253D73 /* TabBarController.m */; };
+		4D778EB41F3FC0CA00253D73 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778EB31F3FC0CA00253D73 /* BaseNavigationController.m */; };
+		4D778EBD1F3FD19C00253D73 /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778EBB1F3FD19C00253D73 /* MyCenterViewController.m */; };
+		4D778EBE1F3FD19C00253D73 /* MyCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D778EBC1F3FD19C00253D73 /* MyCenterViewController.xib */; };
+		4D778EC11F3FD1C700253D73 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778EC01F3FD1C700253D73 /* BaseViewController.m */; };
+		4D778EC81F3FD7C400253D73 /* SH_AFNetClientTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D778EC71F3FD7C400253D73 /* SH_AFNetClientTool.m */; };
 		8EBCE9F3153656EF032F67B4 /* libPods-SmartHomeProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F38125390698DDCA11E7EC4 /* libPods-SmartHomeProject.a */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +47,6 @@
 		483D71648CA4ED64C47A88C4 /* Pods-SmartHomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHomeProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHomeProject/Pods-SmartHomeProject.debug.xcconfig"; sourceTree = "<group>"; };
 		4D20668C1F3978170092352B /* SmartHomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2066901F3978170092352B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4D2066921F3978170092352B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4D2066931F3978170092352B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4D20669B1F3978170092352B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D20669E1F3978170092352B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D2066A01F3978170092352B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,25 @@
 		4D2066B01F3978170092352B /* SmartHomeProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2066B41F3978170092352B /* SmartHomeProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartHomeProjectUITests.m; sourceTree = "<group>"; };
 		4D2066B61F3978170092352B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D778E9B1F3FB70D00253D73 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4D778E9C1F3FB70D00253D73 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4D778EA31F3FB83500253D73 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		4D778EA41F3FB83500253D73 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		4D778EA51F3FB83500253D73 /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
+		4D778EA81F3FBB4800253D73 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4D778EAF1F3FBE1C00253D73 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		4D778EB01F3FBE1C00253D73 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		4D778EB21F3FC0CA00253D73 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		4D778EB31F3FC0CA00253D73 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		4D778EBA1F3FD19C00253D73 /* MyCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterViewController.h; sourceTree = "<group>"; };
+		4D778EBB1F3FD19C00253D73 /* MyCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewController.m; sourceTree = "<group>"; };
+		4D778EBC1F3FD19C00253D73 /* MyCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCenterViewController.xib; sourceTree = "<group>"; };
+		4D778EBF1F3FD1C700253D73 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4D778EC01F3FD1C700253D73 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4D778EC31F3FD2FB00253D73 /* SmartHome_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartHome_Prefix.pch; sourceTree = "<group>"; };
+		4D778EC41F3FD3EA00253D73 /* ClassesHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesHeader.h; sourceTree = "<group>"; };
+		4D778EC61F3FD7C400253D73 /* SH_AFNetClientTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SH_AFNetClientTool.h; sourceTree = "<group>"; };
+		4D778EC71F3FD7C400253D73 /* SH_AFNetClientTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SH_AFNetClientTool.m; sourceTree = "<group>"; };
 		9F38125390698DDCA11E7EC4 /* libPods-SmartHomeProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartHomeProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,11 +129,7 @@
 		4D20668E1F3978170092352B /* SmartHomeProject */ = {
 			isa = PBXGroup;
 			children = (
-				4D2066921F3978170092352B /* AppDelegate.h */,
-				4D2066931F3978170092352B /* AppDelegate.m */,
-				4D20669B1F3978170092352B /* Assets.xcassets */,
-				4D20669D1F3978170092352B /* LaunchScreen.storyboard */,
-				4D2066A01F3978170092352B /* Info.plist */,
+				4D778E861F3FB42200253D73 /* Classes */,
 				4D20668F1F3978170092352B /* Supporting Files */,
 			);
 			path = SmartHomeProject;
@@ -116,6 +138,10 @@
 		4D20668F1F3978170092352B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D20669B1F3978170092352B /* Assets.xcassets */,
+				4D20669D1F3978170092352B /* LaunchScreen.storyboard */,
+				4D778EA81F3FBB4800253D73 /* Main.storyboard */,
+				4D2066A01F3978170092352B /* Info.plist */,
 				4D2066901F3978170092352B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -137,6 +163,264 @@
 				4D2066B61F3978170092352B /* Info.plist */,
 			);
 			path = SmartHomeProjectUITests;
+			sourceTree = "<group>";
+		};
+		4D778E861F3FB42200253D73 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EC21F3FD26100253D73 /* Config */,
+				4D778E8A1F3FB4D500253D73 /* Tools */,
+				4D778E891F3FB4BF00253D73 /* Categorys */,
+				4D778E881F3FB48300253D73 /* ThreeLibs */,
+				4D778E871F3FB46300253D73 /* Modules */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4D778E871F3FB46300253D73 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EB51F3FD11700253D73 /* MyCenterModule */,
+				4D778E9E1F3FB79200253D73 /* HomePageModule */,
+				4D778E8B1F3FB54500253D73 /* BaseModule */,
+			);
+			name = Modules;
+			path = Classes/Modules;
+			sourceTree = "<group>";
+		};
+		4D778E881F3FB48300253D73 /* ThreeLibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ThreeLibs;
+			path = Classes/ThreeLibs;
+			sourceTree = "<group>";
+		};
+		4D778E891F3FB4BF00253D73 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categorys;
+			path = Classes/Categorys;
+			sourceTree = "<group>";
+		};
+		4D778E8A1F3FB4D500253D73 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EC51F3FD70400253D73 /* NetRequst */,
+			);
+			name = Tools;
+			path = Classes/Tools;
+			sourceTree = "<group>";
+		};
+		4D778E8B1F3FB54500253D73 /* BaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				4D778E8F1F3FB5B800253D73 /* MainModule */,
+				4D778E901F3FB5CA00253D73 /* Register */,
+				4D778E8E1F3FB59800253D73 /* Login */,
+			);
+			path = BaseModule;
+			sourceTree = "<group>";
+		};
+		4D778E8E1F3FB59800253D73 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4D778E9A1F3FB6D400253D73 /* ViewModels */,
+				4D778E951F3FB67400253D73 /* Models */,
+				4D778E941F3FB65E00253D73 /* Views */,
+				4D778E931F3FB63E00253D73 /* Controllers */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		4D778E8F1F3FB5B800253D73 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				4D778E9B1F3FB70D00253D73 /* AppDelegate.h */,
+				4D778E9C1F3FB70D00253D73 /* AppDelegate.m */,
+				4D778EAF1F3FBE1C00253D73 /* TabBarController.h */,
+				4D778EB01F3FBE1C00253D73 /* TabBarController.m */,
+				4D778EB21F3FC0CA00253D73 /* BaseNavigationController.h */,
+				4D778EB31F3FC0CA00253D73 /* BaseNavigationController.m */,
+				4D778EBF1F3FD1C700253D73 /* BaseViewController.h */,
+				4D778EC01F3FD1C700253D73 /* BaseViewController.m */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		4D778E901F3FB5CA00253D73 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4D778E991F3FB6C100253D73 /* ViewModels */,
+				4D778E981F3FB6AD00253D73 /* Models */,
+				4D778E971F3FB69D00253D73 /* Views */,
+				4D778E961F3FB68800253D73 /* Controllers */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		4D778E931F3FB63E00253D73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			path = Login/Controllers;
+			sourceTree = "<group>";
+		};
+		4D778E941F3FB65E00253D73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = Login/Views;
+			sourceTree = "<group>";
+		};
+		4D778E951F3FB67400253D73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Login/Models;
+			sourceTree = "<group>";
+		};
+		4D778E961F3FB68800253D73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4D778E971F3FB69D00253D73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D778E981F3FB6AD00253D73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D778E991F3FB6C100253D73 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4D778E9A1F3FB6D400253D73 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			path = Login/ViewModels;
+			sourceTree = "<group>";
+		};
+		4D778E9E1F3FB79200253D73 /* HomePageModule */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EA21F3FB7F200253D73 /* ViewModels */,
+				4D778EA11F3FB7E300253D73 /* Models */,
+				4D778EA01F3FB7D400253D73 /* Views */,
+				4D778E9F1F3FB7C100253D73 /* Controllers */,
+			);
+			path = HomePageModule;
+			sourceTree = "<group>";
+		};
+		4D778E9F1F3FB7C100253D73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EA31F3FB83500253D73 /* HomePageViewController.h */,
+				4D778EA41F3FB83500253D73 /* HomePageViewController.m */,
+				4D778EA51F3FB83500253D73 /* HomePageViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4D778EA01F3FB7D400253D73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D778EA11F3FB7E300253D73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D778EA21F3FB7F200253D73 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4D778EB51F3FD11700253D73 /* MyCenterModule */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EB91F3FD17100253D73 /* ViewModels */,
+				4D778EB81F3FD15E00253D73 /* Models */,
+				4D778EB71F3FD14E00253D73 /* Views */,
+				4D778EB61F3FD13E00253D73 /* Controllers */,
+			);
+			path = MyCenterModule;
+			sourceTree = "<group>";
+		};
+		4D778EB61F3FD13E00253D73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EBA1F3FD19C00253D73 /* MyCenterViewController.h */,
+				4D778EBB1F3FD19C00253D73 /* MyCenterViewController.m */,
+				4D778EBC1F3FD19C00253D73 /* MyCenterViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4D778EB71F3FD14E00253D73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D778EB81F3FD15E00253D73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D778EB91F3FD17100253D73 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4D778EC21F3FD26100253D73 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EC31F3FD2FB00253D73 /* SmartHome_Prefix.pch */,
+				4D778EC41F3FD3EA00253D73 /* ClassesHeader.h */,
+			);
+			name = Config;
+			path = Classes/Config;
+			sourceTree = "<group>";
+		};
+		4D778EC51F3FD70400253D73 /* NetRequst */ = {
+			isa = PBXGroup;
+			children = (
+				4D778EC61F3FD7C400253D73 /* SH_AFNetClientTool.h */,
+				4D778EC71F3FD7C400253D73 /* SH_AFNetClientTool.m */,
+			);
+			path = NetRequst;
 			sourceTree = "<group>";
 		};
 		8F6F8EC3E567555BE9E4129F /* Frameworks */ = {
@@ -221,7 +505,7 @@
 		4D2066841F3978170092352B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = SH;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0810;
 				TargetAttributes = {
 					4D20668B1F3978170092352B = {
@@ -266,7 +550,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D20669F1F3978170092352B /* LaunchScreen.storyboard in Resources */,
+				4D778EA71F3FB83500253D73 /* HomePageViewController.xib in Resources */,
+				4D778EBE1F3FD19C00253D73 /* MyCenterViewController.xib in Resources */,
 				4D20669C1F3978170092352B /* Assets.xcassets in Resources */,
+				4D778EA91F3FBB4800253D73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +633,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D2066941F3978170092352B /* AppDelegate.m in Sources */,
+				4D778E9D1F3FB70D00253D73 /* AppDelegate.m in Sources */,
+				4D778EBD1F3FD19C00253D73 /* MyCenterViewController.m in Sources */,
+				4D778EC81F3FD7C400253D73 /* SH_AFNetClientTool.m in Sources */,
+				4D778EB11F3FBE1C00253D73 /* TabBarController.m in Sources */,
 				4D2066911F3978170092352B /* main.m in Sources */,
+				4D778EA61F3FB83500253D73 /* HomePageViewController.m in Sources */,
+				4D778EC11F3FD1C700253D73 /* BaseViewController.m in Sources */,
+				4D778EB41F3FC0CA00253D73 /* BaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +783,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SmartHomeProject/Classes/Config/SmartHome_Prefix.pch";
 				INFOPLIST_FILE = SmartHomeProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangtetravel.SmartHomeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,7 +798,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SmartHomeProject/Classes/Config/SmartHome_Prefix.pch";
 				INFOPLIST_FILE = SmartHomeProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangtetravel.SmartHomeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -575,6 +872,7 @@
 				4D2066BB1F3978170092352B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D2066BC1F3978170092352B /* Build configuration list for PBXNativeTarget "SmartHomeProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +881,7 @@
 				4D2066BE1F3978170092352B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D2066BF1F3978170092352B /* Build configuration list for PBXNativeTarget "SmartHomeProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -591,6 +890,7 @@
 				4D2066C11F3978170092352B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

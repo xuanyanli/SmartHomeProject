@@ -1,0 +1,17 @@
+//
+//  SmartHome_Prefix.pch
+//  SmartHomeProject
+//
+//  Created by 李选雁 on 2017/8/12.
+//
+//
+
+#ifndef SmartHome_Prefix_pch
+#define SmartHome_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "ClassesHeader.h"
+
+#endif /* SmartHome_Prefix_pch */

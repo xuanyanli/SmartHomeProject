@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "HomePageViewController.h" //首页
+
 @interface AppDelegate ()
 
 @end
@@ -17,9 +19,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //设置app主窗口
+//    [self createAppWindow];
+    
     return YES;
 }
 
+#pragma mark- 设置app的主窗口
+
+- (void)createAppWindow
+{
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    HomePageViewController *homePageVC = [[HomePageViewController alloc]init];
+    [self.window setRootViewController:homePageVC];
+    
+    [self.window makeKeyAndVisible];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
