@@ -9,4 +9,6 @@
 #ifndef RequstUrlHeader_h
 #define RequstUrlHeader_h
 
+#define BaseUrl @"http://test3.chunaiji.online/api/"
+
 #endif /* RequstUrlHeader_h */

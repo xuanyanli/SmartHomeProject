@@ -13,6 +13,11 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 /**
+ 常规参数头文件
+ */
+#import "CommonParamaHeader.h"
+
+/**
  类头文件
  */
 #import "ClassesHeader.h"
@@ -21,5 +26,6 @@
  网络请求URL地址头文件
  */
 #import "RequstUrlHeader.h"
+
 
 #endif /* SmartHome_Prefix_pch */

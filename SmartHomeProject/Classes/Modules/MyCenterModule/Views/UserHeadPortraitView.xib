@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hsJ-3I-ck3" customClass="UserHeadPortraitView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3l-i2-EKU" userLabel="头像底部视图">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J91-W7-bZx" userLabel="用户名">
+                            <rect key="frame" x="149.5" y="175.5" width="75" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-uz-Wle" userLabel="头像">
+                            <rect key="frame" x="147" y="80.5" width="80" height="80"/>
+                            <color key="backgroundColor" red="1" green="0.54993295669555664" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Yoa-uz-Wle" secondAttribute="height" id="dCh-87-vg3"/>
+                                <constraint firstAttribute="width" constant="80" id="zbN-0X-VI8"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="J91-W7-bZx" firstAttribute="centerX" secondItem="S3l-i2-EKU" secondAttribute="centerX" id="GYl-tz-qRp"/>
+                        <constraint firstItem="Yoa-uz-Wle" firstAttribute="centerX" secondItem="S3l-i2-EKU" secondAttribute="centerX" id="JUD-FB-tpo"/>
+                        <constraint firstItem="J91-W7-bZx" firstAttribute="top" secondItem="Yoa-uz-Wle" secondAttribute="bottom" constant="15" id="WNu-T8-iJY"/>
+                        <constraint firstItem="Yoa-uz-Wle" firstAttribute="centerY" secondItem="S3l-i2-EKU" secondAttribute="centerY" id="maw-bJ-iI9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="S3l-i2-EKU" firstAttribute="top" secondItem="hsJ-3I-ck3" secondAttribute="top" id="Qw4-2l-Rfy"/>
+                <constraint firstAttribute="trailing" secondItem="S3l-i2-EKU" secondAttribute="trailing" id="Xul-62-Hb3"/>
+                <constraint firstAttribute="bottom" secondItem="S3l-i2-EKU" secondAttribute="bottom" id="gtl-ea-ymY"/>
+                <constraint firstItem="S3l-i2-EKU" firstAttribute="leading" secondItem="hsJ-3I-ck3" secondAttribute="leading" id="m50-vt-f6F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="portraitImageView" destination="Yoa-uz-Wle" id="xYN-mc-WON"/>
+                <outlet property="userNameLab" destination="J91-W7-bZx" id="XA9-eL-NG5"/>
+            </connections>
+            <point key="canvasLocation" x="59.5" y="-864.5"/>
+        </view>
+    </objects>
+</document>

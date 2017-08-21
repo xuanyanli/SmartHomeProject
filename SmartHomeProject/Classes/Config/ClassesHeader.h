@@ -24,4 +24,9 @@
  */
 #import "SH_AFNetClientTool.h"
 
+/**
+ 图片加载库
+ */
+#import "UIImageView+WebCache.h"
+
 #endif /* ClassesHeader_h */
